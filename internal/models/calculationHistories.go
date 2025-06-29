@@ -12,16 +12,7 @@ type CalculationHistory struct {
 	PreviousCalculationResult CalcResult
 }
 
-var CalculationHistories = []CalculationHistory{
-	{
-		PreviousExpression:        "1+1",
-		PreviousCalculationResult: 2,
-	},
-	{
-		PreviousExpression:        "2+2",
-		PreviousCalculationResult: 2,
-	},
-}
+var CalculationHistories = []CalculationHistory{}
 
 type CalcResult float64
 
