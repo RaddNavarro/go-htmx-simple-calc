@@ -9,13 +9,6 @@
       "Courier New", monospace;
     --color-teal-50: oklch(98.4% 0.014 180.72);
     --color-gray-50: oklch(98.5% 0.002 247.839);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-900: oklch(21% 0.034 264.665);
-    --color-black: #000;
-    --spacing: 0.25rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
@@ -242,9 +235,6 @@
     --tw-border-style: none;
     border-style: none;
   }
-  .bg-\[\#2F2F2F2F\] {
-    background-color: #2F2F2F2F;
-  }
   .bg-\[\#2F2F2F\] {
     background-color: #2F2F2F;
   }
@@ -254,20 +244,8 @@
   .bg-\[\#404040\] {
     background-color: #404040;
   }
-  .bg-\[\#606060\] {
-    background-color: #606060;
-  }
   .bg-\[\#D4A120\] {
     background-color: #D4A120;
-  }
-  .bg-\[\#DCD134\] {
-    background-color: #DCD134;
-  }
-  .bg-\[\#ECDF27\] {
-    background-color: #ECDF27;
-  }
-  .bg-\[404040\] {
-    background-color: 404040;
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
