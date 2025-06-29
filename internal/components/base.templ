@@ -1,0 +1,22 @@
+package components
+
+templ Base(title string) {
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+			<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+			//	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+			<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.5/dist/htmx.min.js" integrity="sha384-t4DxZSyQK+0Uv4jzy5B0QyHyWQD2GFURUmxKMBVww9+e2EJ0ei/vCvv7+79z0fkr" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="/static/css/output.css"/>
+			<title>{ title }</title>
+		</head>
+		<body>
+			// you can also insert a navbar here, i just didn't put it because this doesn't require a navbar
+			<h1>{ title }</h1>
+			{ children... }
+		</body>
+	</html>
+}

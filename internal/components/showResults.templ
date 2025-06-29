@@ -1,0 +1,9 @@
+package components
+
+import "github.com/RaddNavarro/simple-calculator/internal/models"
+
+templ ShowResults(results models.CalcResult) {
+	@Base("") {
+		<p>{ results }</p>
+	}
+}

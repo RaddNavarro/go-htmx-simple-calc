@@ -1,0 +1,59 @@
+package components
+
+templ Home() {
+	@Base("Simple Calculator") {
+		<div class="nav-btn" id="nav-btn">
+			<a href="/viewHistory" hx-boost="true">
+				<button class="btn btn-accent">View History</button>
+			</a>
+			//			<input name="expression" id="expression" type="text" value="" placeholder="Enter expressions here"/>
+			//			<button
+			//				class="btn btn-primary"
+			//				hx-post="/calculate"
+			//				hx-include="[name='expression']"
+			//				hx-swap="beforeend"
+			//				hx-target="#result"
+			//				hx-on::after-request="
+			//        if(event.detail.successful)
+			//          document.getElementById('expression').value = ''
+			//        "
+			//			>Calculate</button>
+			//		</div>
+			//		<div class="result" id="result">
+			//			<p>No results yet</p>
+		</div>
+		<div class="container w-full max-w-full flex flex-col justify-center items-center">
+			<div class="calc flex flex-col justify-center items-center max-w-[480px] bg-[#202020] rounded-[15px]" id="calc" x-data="{ values: '' }">
+				<input type="text" name="test-expression" id="test-expression" x-model="values" readonly class="w-full p-[20px] text-7xl text-left border-none pointer-none rounded-t-[15px] text-teal-50 bg-[#2F2F2F]"/>
+				<div id="buttons" class="grid grid-cols-4 gap-[10px] p-[25px]">
+					<button type="button" x-on:click="values = values + '+'" class="size-[100px] font-bold bg-[#D4A120]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">+</button>
+					<button type="button" x-on:click="values = values + '7'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">7</button>
+					<button type="button" x-on:click="values = values + '8'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">8</button>
+					<button type="button" x-on:click="values = values + '9'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">9</button>
+					<button type="button" x-on:click="values = values + '-'" class="size-[100px] font-bold bg-[#D4A120]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">-</button>
+					<button type="button" x-on:click="values = values + '4'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">4</button>
+					<button type="button" x-on:click="values = values + '5'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">5</button>
+					<button type="button" x-on:click="values = values + '6'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">6</button>
+					<button type="button" x-on:click="values = values + '*'" class="size-[100px] font-bold bg-[#D4A120]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">*</button>
+					<button type="button" x-on:click="values = values + '1'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">1</button>
+					<button type="button" x-on:click="values = values + '2'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">2</button>
+					<button type="button" x-on:click="values = values + '3'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">3</button>
+					<button type="button" x-on:click="values = values + '/'" class="size-[100px] font-bold bg-[#D4A120]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">/</button>
+					<button type="button" x-on:click="values = values + '0'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">0</button>
+					<button type="button" x-on:click="values = values + '.'" class="size-[100px] font-bold bg-[#404040]  border-none rounded-full text-teal-50 text-5xl cursor-pointer">.</button>
+					<button
+						type="submit"
+						class="size-[100px] bg-[#404040] border-none rounded-full text-teal-50 text-5xl cursor-pointer font-bold"
+						hx-post="/calculate"
+						hx-include="[name='test-expression']"
+						hx-target="#test-expression"
+						hx-swap="outerHTML"
+					>=</button>
+					<button type="button" x-on:click="values = ''" class="size-[100px] bg-[#D4A120] border-none rounded-full text-teal-50 text-5xl cursor-pointer font-bold">C</button>
+					//		<div class="bg-gray-50" id="input-expression">
+					//	</div>
+				</div>
+			</div>
+		</div>
+	}
+}

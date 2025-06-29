@@ -1,0 +1,15 @@
+package components
+
+import "github.com/RaddNavarro/simple-calculator/internal/models"
+import "fmt"
+
+templ DisplayResult(result models.CalcResult) {
+	@Base("") {
+		// fukin hell this thing took so long.. apparently this is why i cant just directly do x-init="values = {result}"
+		// the reason why the x-init is like and not just x-init="values = {result}" is because templ will convert that as whole
+		// It will convert it to a string therefore it will result to something like values = "{result}"
+		// since result is a float64 type we would convert result to a string type first
+		// idk if this was mentioned in the docs about this templ interpolating the value as string so yeh oh well at least it works lmao
+		<input type="text" name="test-expression" id="test-expression" x-model="values" x-init={ fmt.Sprintf("values = '%g'", result) } class="w-full p-[20px] text-7xl text-left border-none rounded-t-[15px] text-teal-50 bg-[#2F2F2F]"/>
+	}
+}
