@@ -8,7 +8,6 @@ import (
 	"github.com/RaddNavarro/simple-calculator/internal/handlers"
 )
 
-// testing git fugitive
 func main() {
 	fmt.Println("Hello WOrld")
 
