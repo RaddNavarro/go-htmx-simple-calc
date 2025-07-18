@@ -7,13 +7,13 @@ func init() {
 	fmt.Println("models initialized")
 }
 
+type CalcResult float64
+
 type CalculationHistory struct {
 	PreviousExpression        string
 	PreviousCalculationResult CalcResult
 }
 
 var CalculationHistories = []CalculationHistory{}
-
-type CalcResult float64
 
 var CalcResults []CalcResult
